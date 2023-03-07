@@ -1,9 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-int escolha;
+﻿int escolha;
 double celsius;
 double fahrenheit;
 double conversao1;
+double conversao2;
 
 Console.WriteLine("Olá! Bem vindo ao aplicativo de conversão de temperatura");
 Console.WriteLine("Para começar digite: ");
@@ -20,14 +19,22 @@ switch (escolha)
 
         conversao1 = (celsius * 9) / 5 + 32;
 
-        Console.WriteLine("");
+        Console.WriteLine(celsius + " em FAHRENHEIT é: " + conversao1);
 
         break;
 
     case 2:
+        Console.WriteLine("Conversão FAHRENHEIT -> CELSIUS foi escolhida");
+        Console.WriteLine("Insira a temperatura em FAHRENHEIT (°F)");
+        fahrenheit = double.Parse(Console.ReadLine());
 
+        conversao2 = (fahrenheit - 32) * 5 / 9;
+
+        Console.WriteLine(fahrenheit + " em CELSIUS é: " + conversao2);
         break;
 
     default:
+        Console.WriteLine("Opção não existe.");
         break;
 }
+
